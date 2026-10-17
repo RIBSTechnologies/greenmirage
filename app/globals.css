@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: #fbf9f4;
+  color: #1e2621;
+}
+
+::selection {
+  background: #1e4d3e;
+  color: #fbf9f4;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f1ea;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e4d3e;
+  border-radius: 999px;
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold text-forest hover:-translate-y-0.5 hover:bg-gold-bright hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply btn border border-white/70 text-white hover:-translate-y-0.5 hover:bg-white hover:text-forest;
+  }
+
+  .btn-outline-dark {
+    @apply btn border border-forest/15 text-forest hover:-translate-y-0.5 hover:border-forest hover:bg-forest hover:text-parchment;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-stone-200/80 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-stone-400 focus:border-forest-emerald focus:ring-2 focus:ring-forest-emerald/15;
+  }
+
+  .field-dark {
+    @apply w-full rounded-xl border border-white/10 bg-forest px-4 py-3 text-sm text-parchment outline-none transition placeholder:text-sage/80 focus:border-gold focus:ring-2 focus:ring-gold/20;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
