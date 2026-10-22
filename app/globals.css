@@ -8,13 +8,13 @@ html {
 }
 
 body {
-  background: #fbf9f4;
-  color: #1e2621;
+  background: #f7fbf4;
+  color: #102010;
 }
 
 ::selection {
-  background: #1e4d3e;
-  color: #fbf9f4;
+  background: #1b5e20;
+  color: #f5fbf2;
 }
 
 ::-webkit-scrollbar {
@@ -22,11 +22,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4f1ea;
+  background: #eef6e8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e4d3e;
+  background: #1b5e20;
   border-radius: 999px;
 }
 
@@ -40,7 +40,7 @@ body {
   }
 
   .btn-gold {
-    @apply btn bg-gold text-forest hover:-translate-y-0.5 hover:bg-gold-bright hover:shadow-lg;
+    @apply btn bg-gold text-forest-deep hover:-translate-y-0.5 hover:bg-gold-bright hover:shadow-lg;
   }
 
   .btn-outline {

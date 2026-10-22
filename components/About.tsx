@@ -30,15 +30,17 @@ export function About() {
             About Green Mirage
           </h2>
           <p className="mt-6 text-[15px] leading-7 text-mist">
-            At Green Mirage Technical Services, we specialize in transforming outdoor and indoor
-            environments into refined, functional, and sustainable spaces. Creativity, technical
-            expertise, and smart solutions are tailored to each client’s vision.
+            At Green Mirage Technical Services, we transform outdoor and indoor environments into
+            refined, functional, and sustainable spaces for the way people live and work.
           </p>
           <p className="mt-4 text-[15px] leading-7 text-mist">
-            Our work covers landscape design, irrigation, interior and exterior greenery, pergolas,
-            and outdoor living. From concept to execution, every project is delivered with precision
-            and a commitment to quality.
+            Our work covers landscape design, irrigation, greenery, pergolas, play areas, and
+            building maintenance. From concept to execution, every project is delivered with
+            precision and a commitment to quality.
           </p>
+          <a href="/about" className="btn-outline-dark mt-8">
+            Our story
+          </a>
           <dl className="mt-10 grid grid-cols-3 gap-3">
             {metrics.map((metric) => (
               <div key={metric.label} className="rounded-2xl border border-[#E5E0D5] bg-white px-3 py-4 text-center shadow-card">

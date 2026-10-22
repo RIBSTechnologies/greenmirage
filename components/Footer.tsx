@@ -2,12 +2,20 @@ import { nav, services } from "@/lib/data";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#071910] text-sage">
+    <footer className="border-t border-white/10 bg-forest-deep text-sage">
       <div className="shell grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <a href="#top" className="inline-flex items-center gap-3 text-parchment">
-            <img src="/logo.svg" alt="" width={40} height={40} className="h-10 w-10" />
-            <span className="font-serif text-lg">Green Mirage</span>
+          <a href="/" className="inline-flex items-center gap-2.5 text-parchment">
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white p-1 shadow-sm">
+              <img
+                src="/logo.png"
+                alt=""
+                width={52}
+                height={52}
+                className="h-full w-full object-contain"
+              />
+            </span>
+            <span className="font-serif text-xl leading-none tracking-wide sm:text-2xl">Green Mirage</span>
           </a>
           <p className="mt-5 text-sm leading-6">
             Where technology meets nature. Sustainable outdoor and interior landscapes for private
@@ -31,9 +39,9 @@ export function Footer() {
         <div>
           <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Services</p>
           <ul className="mt-4 space-y-2">
-            {services.slice(0, 5).map((service) => (
-              <li key={service.title}>
-                <a href="#services" className="text-sm transition hover:text-parchment">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <a href={`/services/${service.slug}`} className="text-sm transition hover:text-parchment">
                   {service.title}
                 </a>
               </li>

@@ -6,23 +6,23 @@ const config: Config = {
     extend: {
       colors: {
         forest: {
-          DEFAULT: "#0F3B2E",
-          deep: "#0C3227",
-          mid: "#2D5A46",
-          emerald: "#4A7C59",
+          DEFAULT: "#0A3D0A",
+          deep: "#041804",
+          mid: "#1B5E20",
+          emerald: "#43A047",
         },
         cream: {
-          DEFAULT: "#FBF9F4",
-          warm: "#F7F4EC",
+          DEFAULT: "#F7FBF4",
+          warm: "#EEF6E8",
         },
         gold: {
-          DEFAULT: "#C2A36B",
-          bright: "#D4B276",
+          DEFAULT: "#8BC34A",
+          bright: "#AED581",
         },
-        ink: "#1E2621",
-        mist: "#6E7771",
-        parchment: "#F8FAFC",
-        sage: "#A7B3AE",
+        ink: "#102010",
+        mist: "#5A6B5A",
+        parchment: "#F5FBF2",
+        sage: "#A8C4A0",
       },
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],

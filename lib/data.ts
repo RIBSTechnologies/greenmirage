@@ -15,21 +15,22 @@ import {
   Layers,
   MessageCircle,
   Palette,
-  ShieldCheck,
   Sparkles,
   Sprout,
   Trees,
   Wallet,
   Wind,
+  Wrench,
 } from "lucide-react";
 
 export const nav = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Approach" },
-  { href: "#collection", label: "Collections" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/approach", label: "Approach" },
+  { href: "/collections", label: "Collections" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const heroFeatures: { title: string; text: string; icon: LucideIcon }[] = [
@@ -93,53 +94,53 @@ export const outdoorValues: { title: string; text: string; icon: LucideIcon }[] 
 
 export const reasons: { title: string; text: string; icon: LucideIcon }[] = [
   {
-    title: "10 Yrs Warranty",
-    text: "A long-term warranty so interiors stay beautiful, functional, and worry-free.",
-    icon: ShieldCheck,
+    title: "Excellent Maintenance",
+    text: "Delivering excellence in landscape maintenance through sustainable practices, efficient irrigation systems, and expert nutrient and fertilizer management to ensure healthy and thriving landscapes.",
+    icon: Wrench,
   },
   {
     title: "Budget-Friendly Pricing",
-    text: "High-standard delivery that stays within the planned budget.",
+    text: "Our cost-efficient approach helps clients achieve high-standard project delivery while staying within planned budgets.",
     icon: Wallet,
   },
   {
     title: "Timely Project Completion",
-    text: "Planning and execution that meet the committed timeline without compromising quality.",
+    text: "We ensure careful planning and execution to deliver projects within the committed timelines without compromising quality.",
     icon: CalendarCheck,
   },
   {
     title: "150+ Checklist",
-    text: "Every project follows a detailed 150+ point checklist for precision and quality.",
+    text: "Every project follows a detailed 150+ point checklist to ensure precision, quality, and perfection in every detail.",
     icon: ClipboardCheck,
   },
   {
     title: "United Arab Emirates",
-    text: "Reliable landscape and technical solutions delivered across the UAE.",
+    text: "Green Mirage Technical Services is recognized for delivering reliable and high-quality landscape and technical solutions across the UAE.",
     icon: MapPin,
   },
   {
     title: "Authentic Brands",
-    text: "Certified, trusted brands so every product is genuine and high quality.",
+    text: "We partner only with certified, trusted brands to ensure every product in your home is genuine and high-quality.",
     icon: Award,
   },
   {
     title: "2 Stage Assembly",
-    text: "Two rounds of assembly checks for a flawless finish and lasting durability.",
+    text: "Every installation goes through two rounds of assembly checks for flawless finish and long-lasting durability.",
     icon: BadgeCheck,
   },
   {
     title: "Daily Updates",
-    text: "Daily progress updates straight from the project site.",
+    text: "Stay informed at every step with daily progress updates straight from your project site.",
     icon: MessageCircle,
   },
   {
     title: "Skilled Irrigation Designers",
-    text: "Fully automated irrigation that uses less water on large and small projects.",
+    text: "We design fully automated and smart irrigation systems that reduce water consumption while ensuring efficient coverage for both large and small projects.",
     icon: Droplets,
   },
   {
     title: "Expert Horticulturist",
-    text: "Planting chosen and cared for by an expert horticulturist.",
+    text: "Highly skilled horticulturist with expertise in plant selection, soil health, irrigation needs, and landscape sustainability.",
     icon: Leaf,
   },
 ];
@@ -185,46 +186,109 @@ export const steps: { number: string; title: string; text: string; icon: LucideI
 
 export const services = [
   {
+    slug: "villa-landscaping",
     title: "Villa Landscaping",
     text: "Complete villa grounds, designed and delivered from concept to execution.",
     image: "/images/service-villa.jpg",
+    points: [
+      "Complete villa grounds, from the first concept through execution.",
+      "Arrival court, garden, and outdoor rooms planned as one landscape.",
+      "Planting, paths, and shade composed for everyday life at home.",
+    ],
   },
   {
+    slug: "terrace-balcony-gardens",
     title: "Terrace & Balcony Gardens",
     text: "Terrace and balcony gardens shaped for shade, views, and everyday use.",
     image: "/images/service-terrace.jpg",
+    points: [
+      "Gardens shaped for shade, views, and everyday use.",
+      "Lounge planting and green walls for a city terrace.",
+      "A balcony that stays alive through the year.",
+    ],
   },
   {
+    slug: "poolside-deck-design",
     title: "Poolside & Deck Design",
     text: "Poolside decks and planting composed as one outdoor room.",
     image: "/images/service-pool.jpg",
+    points: [
+      "Poolside decks and planting composed as one outdoor room.",
+      "Color and palms held to the edge of the water.",
+      "Seating and paths planned around the pool.",
+    ],
   },
   {
+    slug: "outdoor-lounges",
     title: "Outdoor Lounges",
     text: "Outdoor lounges for morning coffee, gatherings, and evening rest.",
     image: "/images/service-lounge.jpg",
+    points: [
+      "Lounges for morning coffee, gatherings, and evening rest.",
+      "Seating, lighting, and planting composed for night use.",
+      "A shaded place to pause outdoors.",
+    ],
   },
   {
+    slug: "backyard-landscaping",
     title: "Backyard Landscaping",
     text: "Backyard landscapes for play, paths, and everyday family life.",
     image: "/images/service-backyard.jpg",
+    points: [
+      "Landscapes for play, paths, and everyday family life.",
+      "Lawn, terrace, and shade composed for everyday use.",
+      "Pathways that guide movement through the garden.",
+    ],
   },
   {
+    slug: "interior-landscaping",
     title: "Interior Landscaping",
     text: "Interior greenery for rooms, courtyards, and indoor spaces.",
     image: "/images/service-interior.jpg",
+    points: [
+      "Greenery for rooms, courtyards, and indoor spaces.",
+      "Specimens chosen for form and light.",
+      "Planting for atriums, entries, and sheltered courts.",
+    ],
   },
   {
+    slug: "outdoor-lights",
     title: "Outdoor Lights",
     text: "Lighting that transforms the mood of paths, gardens, and lounges.",
     image: "/images/service-lighting.jpg",
+    points: [
+      "Lighting that transforms the mood of paths, gardens, and lounges.",
+      "Evening light for coffee corners, play, and quiet hours.",
+      "Light planned together with the planting.",
+    ],
   },
   {
+    slug: "pergolas",
     title: "Pergolas",
     text: "Pergolas and shaded outdoor rooms, built with the landscape.",
     image: "/images/service-pergola.jpg",
+    points: [
+      "Pergolas and shaded outdoor rooms, built with the landscape.",
+      "Shade for terraces, lounges, and garden edges.",
+      "Structure and planting designed as one outdoor room.",
+    ],
+  },
+  {
+    slug: "civil-work",
+    title: "Civil Work",
+    text: "Plaster, carpentry, wood flooring, and the built work that supports the landscape.",
+    image: "/images/service-villa.jpg",
+    points: [
+      "Plaster works for walls, courts, and garden edges.",
+      "Carpentry and wood flooring for outdoor rooms and interiors.",
+      "Fitting, repair, and maintenance of the finished built work.",
+    ],
   },
 ];
+
+export function getService(slug: string) {
+  return services.find((service) => service.slug === slug);
+}
 
 export type Plant = {
   name: string;

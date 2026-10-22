@@ -4,7 +4,7 @@ export function CtaBand() {
   return (
     <section className="relative min-h-[320px] bg-forest">
       <Photo
-        src="/images/hero-bg.jpg"
+        src="/images/service-villa.jpg"
         alt=""
         sizes="100vw"
         className="opacity-40"
@@ -19,7 +19,7 @@ export function CtaBand() {
           Morning coffee corners, play spaces, evening rest, or a quiet place to pause. Outdoor
           spaces become a meaningful extension of home.
         </p>
-        <a href="#contact" className="btn-gold mt-8">
+        <a href="/contact" className="btn-gold mt-8">
           Get in Touch
         </a>
       </div>

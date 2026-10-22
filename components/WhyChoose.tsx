@@ -14,7 +14,7 @@ export function WhyChoose() {
             tone="light"
             kicker="Our commitment"
             title="How Are We Different"
-            description="Warranty, trusted brands, smart irrigation, and an expert horticulturist, with daily updates from the site."
+            description="Maintenance, trusted brands, smart irrigation, and an expert horticulturist, with daily updates from the site."
           />
         </Reveal>
 

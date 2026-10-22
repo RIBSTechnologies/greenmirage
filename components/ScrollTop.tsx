@@ -17,7 +17,7 @@ export function ScrollTop() {
     <a
       href="#top"
       aria-label="Back to top"
-      className={`fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-forest text-gold shadow-[0_8px_30px_rgb(0,0,0,0.18)] transition duration-300 hover:bg-forest-mid focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+      className={`fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-forest text-gold shadow-[0_8px_30px_rgb(0,0,0,0.18)] transition duration-300 hover:bg-forest-mid hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
       }`}
     >

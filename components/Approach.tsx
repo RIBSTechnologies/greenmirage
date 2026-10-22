@@ -28,6 +28,11 @@ export function Approach() {
             </RevealItem>
           ))}
         </RevealGroup>
+        <div className="mt-8 text-center">
+          <a href="/approach" className="btn-outline-dark">
+            See the approach
+          </a>
+        </div>
       </div>
     </section>
   );

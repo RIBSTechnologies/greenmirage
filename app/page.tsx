@@ -1,9 +1,10 @@
 import { About } from "@/components/About";
 import { Approach } from "@/components/Approach";
 import { Collections } from "@/components/Collections";
-import { Contact } from "@/components/Contact";
+import { ContactBand } from "@/components/Contact";
 import { CtaBand } from "@/components/CtaBand";
 import { Featured } from "@/components/Featured";
+import { FloatingContact } from "@/components/FloatingContact";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -36,10 +37,11 @@ export default function HomePage() {
         <CtaBand />
         <Collections />
         <Showcase />
-        <Contact />
+        <ContactBand />
       </main>
       <Footer />
       <ScrollTop />
+      <FloatingContact />
     </>
   );
 }

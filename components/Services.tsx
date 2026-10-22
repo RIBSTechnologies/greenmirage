@@ -4,6 +4,7 @@ import { Photo } from "@/components/Photo";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion";
 import { services } from "@/lib/data";
+import Link from "next/link";
 
 export function Services() {
   return (
@@ -20,8 +21,11 @@ export function Services() {
 
         <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
-            <RevealItem key={service.title} lift>
-              <article className="h-full overflow-hidden rounded-2xl border border-[#E5E0D5] bg-white shadow-card">
+            <RevealItem key={service.slug} lift>
+              <Link
+                href={`/services/${service.slug}`}
+                className="group block h-full overflow-hidden rounded-2xl border border-[#E5E0D5] bg-white shadow-card"
+              >
                 <div className="relative h-44 overflow-hidden bg-forest-mid">
                   <Photo
                     src={service.image}
@@ -30,10 +34,12 @@ export function Services() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-serif text-xl text-forest">{service.title}</h3>
+                  <h3 className="font-serif text-xl text-forest transition group-hover:text-forest-emerald">
+                    {service.title}
+                  </h3>
                   <p className="mt-2 text-sm leading-6 text-mist">{service.text}</p>
                 </div>
-              </article>
+              </Link>
             </RevealItem>
           ))}
         </RevealGroup>
