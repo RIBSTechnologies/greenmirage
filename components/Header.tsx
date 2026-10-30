@@ -59,12 +59,12 @@ export function Header() {
                   {item.label}
                   <ChevronDown size={14} className="transition duration-300 group-hover:rotate-180 group-focus-within:rotate-180" />
                 </Link>
-                <div className="invisible absolute left-1/2 top-[calc(100%+0.75rem)] z-50 w-[34rem] -translate-x-1/2 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="invisible absolute left-1/2 top-[calc(100%+0.75rem)] z-50 w-[26rem] -translate-x-1/2 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="overflow-hidden rounded-2xl border border-[#E4DDD2] bg-[#FBF9F5] shadow-[0_22px_50px_rgba(16,32,16,0.22)]">
                     <p className="border-b border-[#E4DDD2] px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-[#8A8175]">
                       Our services
                     </p>
-                    <ul className="grid grid-cols-2 gap-1 p-2">
+                    <ul className="grid gap-1 p-2">
                       {services.map((service, index) => {
                         const href = `/services/${service.slug}`;
                         const active = pathname === href;
@@ -85,7 +85,18 @@ export function Header() {
                               >
                                 {String(index + 1).padStart(2, "0")}
                               </span>
-                              <span className="leading-snug">{service.title}</span>
+                              <span className="min-w-0">
+                                <span className="block leading-snug">{service.title}</span>
+                                {"menu" in service && service.menu ? (
+                                  <span
+                                    className={`mt-0.5 block text-[12px] leading-snug ${
+                                      active ? "text-parchment/70" : "text-[#8A8175]"
+                                    }`}
+                                  >
+                                    {service.menu}
+                                  </span>
+                                ) : null}
+                              </span>
                             </Link>
                           </li>
                         );
@@ -172,7 +183,18 @@ export function Header() {
                               >
                                 {String(index + 1).padStart(2, "0")}
                               </span>
-                              {service.title}
+                              <span className="min-w-0">
+                                <span className="block leading-snug">{service.title}</span>
+                                {"menu" in service && service.menu ? (
+                                  <span
+                                    className={`mt-0.5 block text-[12px] leading-snug ${
+                                      active ? "text-parchment/70" : "text-[#8A8175]"
+                                    }`}
+                                  >
+                                    {service.menu}
+                                  </span>
+                                ) : null}
+                              </span>
                             </Link>
                           </li>
                         );

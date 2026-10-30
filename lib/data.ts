@@ -184,104 +184,418 @@ export const steps: { number: string; title: string; text: string; icon: LucideI
   },
 ];
 
-export const services = [
+export type ServicePoint = { label: string; text: string };
+
+export type ServiceArea = {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  points: ServicePoint[];
+};
+
+export type ServiceReference = {
+  type: string;
+  name: string;
+  place: string;
+  image: string;
+};
+
+export const services: {
+  slug: string;
+  title: string;
+  menu?: string;
+  text: string;
+  image: string;
+  areas: ServiceArea[];
+  reference?: ServiceReference[];
+}[] = [
   {
-    slug: "villa-landscaping",
-    title: "Villa Landscaping",
-    text: "Complete villa grounds, designed and delivered from concept to execution.",
-    image: "/images/service-villa.jpg",
-    points: [
-      "Complete villa grounds, from the first concept through execution.",
-      "Arrival court, garden, and outdoor rooms planned as one landscape.",
-      "Planting, paths, and shade composed for everyday life at home.",
+    slug: "hardscape",
+    title: "Hardscape",
+    menu: "All Civil Works & Paving",
+    text: "The structural framework and hardscaping components serve as the foundational architecture for all Green Mirage luxury landscape designs, ensuring long-term structural integrity and seamless functional zoning.",
+    image: "/images/gallery-backyard.jpg",
+    areas: [
+      {
+        title: "Civil Work, Masonry & Structures",
+        text: "Precision masonry works, site grading, structural reinforcement, and concrete framing engineered to anchor expansive residential gardens and commercial facilities safely.",
+        image: "/images/service-villa.jpg",
+        alt: "Modern villa with a stone terrace, lawn, and pool court",
+        points: [
+          {
+            label: "Plaster Works",
+            text: "High-quality plastering solutions for internal and external walls, providing smooth, durable, and weather-proof perimeter boundary finishes.",
+          },
+          {
+            label: "Retaining & Boundary Walls",
+            text: "Engineering resilient retaining blocks and boundary feature backdrops built to withstand heavy landscape mass and seasonal shifts.",
+          },
+          {
+            label: "Concrete Framing",
+            text: "Forming accurate structural layouts for modern water feature reservoirs, fountain basins, and custom architectural geometric borders.",
+          },
+        ],
+      },
+      {
+        title: "Interlocking, Paving & Walkways",
+        text: "Artistic high-durability circulation footpaths, premium driveways, and courtyard multi-level platforms that naturally guide foot movement across the estate landscape.",
+        image: "/images/service-backyard.jpg",
+        alt: "Paved courtyard with grass joints, a fire bowl, and a clipped hedge",
+        points: [
+          {
+            label: "Interlocking Paving",
+            text: "Premium interlocking stone installations and cobblestone driveway layouts engineered to easily withstand continuous heavy vehicular loads.",
+          },
+          {
+            label: "Stepping Stones & Pathways",
+            text: "Strategic geometric configurations utilizing large natural flags, premium granite slate tiles, or elegant stepping stones set in lawn grids.",
+          },
+        ],
+      },
+      {
+        title: "Pergolas & Shaded Structural Elements",
+        text: "Premium engineered structures providing active architectural microclimate shelter, dynamic outdoor shade control, and luxury visual framing.",
+        image: "/images/service-pergola.jpg",
+        alt: "Shaded pergola beside a pool, with stepping stones and an outdoor counter",
+        points: [
+          {
+            label: "Timber Carpentry Pergolas",
+            text: "Custom CNC-routed wooden shade frameworks, traditional treated timber cladding, and premium high-performance softwood accent installations.",
+          },
+          {
+            label: "Premium Aluminum Systems",
+            text: "Modern minimalist structures built with integrated powder-coated aluminum, motorized louvers, canvas awnings, and active weather automation loops.",
+          },
+          {
+            label: "Utilities & Media Integration",
+            text: "Dedicated internal wiring conduits mapped seamlessly into structural beams to power flush downlights, sound zones, and automated cooling mist loops safely.",
+          },
+        ],
+      },
+      {
+        title: "Luxury Outdoor Social Lounges",
+        text: "Fully functional, weather-proof living environments custom crafted to bring the full sophistication and plush comfort of indoor living spaces directly into the open air.",
+        image: "/images/service-lounge.jpg",
+        alt: "Timber outdoor lounge with sofas, lanterns, and a shaded deck",
+        points: [
+          {
+            label: "Custom Built-in Seating",
+            text: "Bespoke masonry layout couches, permanent architectural stone perimeter benches, and premium water-resistant upholstery frameworks.",
+          },
+          {
+            label: "Specialized Outdoor Kitchens",
+            text: "Sophisticated external culinary spaces featuring robust premium barbecue counters, clean weatherized bar hubs, integrated outdoor sinks, and storage lines.",
+          },
+        ],
+      },
     ],
   },
   {
-    slug: "terrace-balcony-gardens",
-    title: "Terrace & Balcony Gardens",
-    text: "Terrace and balcony gardens shaped for shade, views, and everyday use.",
-    image: "/images/service-terrace.jpg",
-    points: [
-      "Gardens shaped for shade, views, and everyday use.",
-      "Lounge planting and green walls for a city terrace.",
-      "A balcony that stays alive through the year.",
+    slug: "landscape",
+    title: "Landscape",
+    menu: "Planting, Soil & Horticulture Curation",
+    text: "Combining advanced scientific soil engineering with high-impact botanical choices to deliver lively, visually spectacular green spaces optimized for the distinct Middle Eastern climate.",
+    image: "/images/gallery-entry.jpg",
+    areas: [
+      {
+        title: "Full-Scale Villa & Backyard Landscaping",
+        text: "Developing holistic residential landscape themes from initial concept sketching and detailed 3D visualization right through to strict physical execution across the entire property.",
+        image: "/images/gallery-backyard.jpg",
+        alt: "Backyard lawn, planted beds, and a raised terrace under trees",
+        points: [
+          {
+            label: "Strategic Space Zoning",
+            text: "Comprehensive microclimate evaluations to establish thermal protection zones, maximize property privacy, and establish pleasant family gathering hubs.",
+          },
+          {
+            label: "Premium Turf Management",
+            text: "Installation of high-durability, kid-safe synthetic turf or premium natural grass lawns optimized for intense regular activity and everyday play.",
+          },
+        ],
+      },
+      {
+        title: "Specialized Terrace & Balcony Sky Gardens",
+        text: "Intimate, space-maximized vertical retreats engineered to seamlessly resolve high-altitude wind currents, structural load constraints, and intense solar exposure.",
+        image: "/images/service-terrace.jpg",
+        alt: "Rooftop terrace with a planted pergola, palms, and city views",
+        points: [
+          {
+            label: "Weight-Optimized Hardware",
+            text: "High-performance, ultra-lightweight modular planters and engineered multi-layer drainage matrices that safeguard underlying structural slabs from moisture.",
+          },
+          {
+            label: "Vertical Green Walls",
+            text: "Dynamic custom green walls and cascading flower structures featuring built-in internal automated root-level watering pipelines.",
+          },
+        ],
+      },
+      {
+        title: "Biophilic Interior Landscapes & Curation",
+        text: "Integrating natural flora inside high-ceiling residential atriums, double-height entrances, indoor lightwells, commercial reception hubs, and office common areas.",
+        image: "/images/atrium.jpg",
+        alt: "Interior courtyard with moss, a timber wall, and planted green screens",
+        points: [
+          {
+            label: "Live Indoor Highlights",
+            text: "Deploying magnificent live accent trees (such as Ficus Lyrata or elegant Palms) precisely calibrated to match interior ambient light settings.",
+          },
+          {
+            label: "Artificial Premium Curation",
+            text: "High-fidelity, premium artificial botanical green walls and faux tree sets designed for low-maintenance indoor zones.",
+          },
+        ],
+      },
+      {
+        title: "Professional Horticulture & Long-term Garden Care",
+        text: "Consistent, systematic maintenance services managed by specialized experts to protect botanical wellness, soil biome health, and overall aesthetic perfection.",
+        image: "/images/maintenance-beds.jpg",
+        alt: "Garden crew working soil and planted beds beside a lawn",
+        points: [
+          {
+            label: "Nutrient & Soil Stewardship",
+            text: "Complete soil remediation, customized organic fertilizer plans, micro-nutrient conditioning, and proactive pest control cycles.",
+          },
+          {
+            label: "Botanical Care & Pruning",
+            text: "Precision structural pruning, systematic seasonal flower bed replanting, and continuous structural hedging to preserve clean architectural lines.",
+          },
+        ],
+      },
+    ],
+    reference: [
+      {
+        type: "Natural Collection",
+        name: "Bonsai / Olive Trees",
+        place: "Premium architectural focal points for central courtyards, entry walkways, and premium planters.",
+        image: "/images/natural-plant-bonsai.jpg",
+      },
+      {
+        type: "Natural Collection",
+        name: "Ficus Lyrata",
+        place: "Excellent indoor biophilic accent; thrives in bright, indirect sunlight within residential lobbies and atriums.",
+        image: "/images/natural-plant-ficus.jpg",
+      },
+      {
+        type: "Natural Collection",
+        name: "Areca & Bamboo Palms",
+        place: "Perfect for creating soft, dense privacy screens along boundary walls, pool boundaries, and side pathways.",
+        image: "/images/natural-plant-areca.jpg",
+      },
+      {
+        type: "Natural Collection",
+        name: "Bougainvillea",
+        place: "Provides vibrant bursts of seasonal color; ideal for climbing pergolas, boundary walls, and sunny balconies.",
+        image: "/images/natural-plant-bougainvillea.jpg",
+      },
+      {
+        type: "Natural Collection",
+        name: "Frangipani (Plumeria)",
+        place: "Signature luxury statement tree; planted as standalone specimens near pool decks and sunlit corners.",
+        image: "/images/natural-plant-frangipani.jpg",
+      },
+      {
+        type: "Natural Collection",
+        name: "Succulents & Desert Plants",
+        place: "Xeriscaping essentials; maximum heat tolerance with minimal water needs, perfect for rock gardens.",
+        image: "/images/natural-plant-succulents.jpg",
+      },
+      {
+        type: "Artificial Collection",
+        name: "Statement Canopy / Olive",
+        place: "Full-canopy fake trees designed for indoor majlis corners, high-ceiling office lobbies, and deep covered alcoves.",
+        image: "/images/artificial-plant-tree.jpg",
+      },
+      {
+        type: "Artificial Collection",
+        name: "Crimson / White Blossom",
+        place: "Adds consistent floral accents to interior receptions, commercial storefronts, and shaded entry vestibules.",
+        image: "/images/artificial-plant-crimson.jpg",
+      },
+      {
+        type: "Artificial Collection",
+        name: "Showroom Palm / Hanging Color",
+        place: "Instant vertical height and vibrant cascading colors for interior walls or balconies with zero maintenance needs.",
+        image: "/images/artificial-plant-palm.jpg",
+      },
     ],
   },
   {
-    slug: "poolside-deck-design",
-    title: "Poolside & Deck Design",
-    text: "Poolside decks and planting composed as one outdoor room.",
-    image: "/images/service-pool.jpg",
-    points: [
-      "Poolside decks and planting composed as one outdoor room.",
-      "Color and palms held to the edge of the water.",
-      "Seating and paths planned around the pool.",
+    slug: "irrigation",
+    title: "Irrigation",
+    menu: "Automatic Smart Systems & New Technology",
+    text: "Pioneering highly automated, conservation-centric irrigation networks that maximize water delivery precision while significantly lowering overall environmental consumption across the UAE.",
+    image: "/images/spaces-seasons.jpg",
+    areas: [
+      {
+        title: "Smart Irrigation Network Design & Layout",
+        text: "Developing detailed hydraulic system designs that guarantee perfectly balanced water distribution, eliminating dry patches and over-saturated soil zones completely.",
+        image: "/images/gallery-entry.jpg",
+        alt: "Planted villa court with palms, beds, and a paved drive",
+        points: [
+          {
+            label: "High-Efficiency Distribution",
+            text: "Advanced sub-surface smart drip lines and pressure-compensating spray nozzles that keep water evaporation losses down to an absolute minimum.",
+          },
+          {
+            label: "Precision Hydro-Zoning",
+            text: "Dividing the property landscape into distinct water-use zones based on specific plant species, sun exposure levels, and soil absorption rates.",
+          },
+        ],
+      },
+      {
+        title: "Next-Generation Automation & IoT Integration",
+        text: "Deploying intelligent, internet-connected control frameworks that autonomously regulate estate watering schedules based on real-time environmental input data.",
+        image: "/images/service-terrace.jpg",
+        alt: "Planted rooftop terrace with layered planters under a pergola",
+        points: [
+          {
+            label: "Weather-Adaptive Controllers",
+            text: "Weather-tracking smart controllers that automatically pause irrigation routines whenever rainfall or unexpected humidity changes occur.",
+          },
+          {
+            label: "Soil Sensors & Leak Detection",
+            text: "Digital soil moisture monitors and smart flow sensors that immediately flag system pipeline leaks, protecting properties from unexpected water bills.",
+          },
+        ],
+      },
+      {
+        title: "Technical System Upkeep & Diagnostics",
+        text: "Routine technical assessments and equipment checkups executed by seasoned irrigation technicians to maintain peak system operation all year round.",
+        image: "/images/maintenance-beds.jpg",
+        alt: "Crew tending soil and planted beds on a maintained garden",
+        points: [
+          {
+            label: "Maintenance & Electro-Flushing",
+            text: "Systematic chemical flushing of drip line networks to remove mineral scaling, routine nozzle realignments, and seasonal electronic calibration updates.",
+          },
+        ],
+      },
     ],
   },
   {
-    slug: "outdoor-lounges",
-    title: "Outdoor Lounges",
-    text: "Outdoor lounges for morning coffee, gatherings, and evening rest.",
-    image: "/images/service-lounge.jpg",
-    points: [
-      "Lounges for morning coffee, gatherings, and evening rest.",
-      "Seating, lighting, and planting composed for night use.",
-      "A shaded place to pause outdoors.",
+    slug: "mep-swimming-pools",
+    title: "MEP & Swimming Pools",
+    menu: "Mechanical, Electrical, Plumbing",
+    text: "Integrating critical engineering utilities, luxury aquatic construction, and advanced electromechanical climate systems seamlessly into modern properties.",
+    image: "/images/gallery-pool.jpg",
+    areas: [
+      {
+        title: "Luxury Swimming Pool Construction & Integration",
+        text: "Complete turnkey installation and design of custom residential pools, structural decks, and adjacent planting zones, brought together into one fluid space.",
+        image: "/images/service-pool.jpg",
+        alt: "Long swimming pool beside a pavilion, palms, and a timber deck",
+        points: [
+          {
+            label: "Civil Pool Engineering",
+            text: "Custom structural concrete pouring, high-grade waterproofing membranes, premium porcelain tile layouts, and non-slip natural stone coping finishes.",
+          },
+          {
+            label: "Architectural Pool Features",
+            text: "Designing modern sunken pool lounges, dynamic swim-up bars, integrated fire-pits, and elegant, soothing waterfall stone features.",
+          },
+        ],
+      },
+      {
+        title: "Electromechanical & Custom Plumbing Installations",
+        text: "Deploying top-tier plumbing setups and commercial-grade mechanical pumps to ensure optimal, long-lasting performance for all water systems.",
+        image: "/images/gallery-pool.jpg",
+        alt: "Pool edge with waterfall spouts, underwater lights, and a stone water wall",
+        points: [
+          {
+            label: "Pool Pumps & Filtration Systems",
+            text: "High-efficiency variable-speed circulation pumps, sand filters, and automated eco-friendly saltwater chlorination systems.",
+          },
+          {
+            label: "Core Plumbing & Sanitary Works",
+            text: "Professional water supply pipe mapping, reliable drainage networks, high-pressure booster pumps, and comprehensive sanitary hardware management.",
+          },
+        ],
+      },
+      {
+        title: "HVAC, Ventilation & Air Filtration Systems",
+        text: "Comprehensive design, installation, and regular servicing of heavy-duty HVAC components to ensure excellent climate control and pristine air quality.",
+        image: "/images/service-interior.jpg",
+        alt: "Finished interior with a planted wall, stone, and warm lighting",
+        points: [
+          {
+            label: "System Engineering & Setup",
+            text: "Precision installation of energy-efficient central air conditioning units, clean air duct routing, and advanced ventilation exhaust layouts.",
+          },
+          {
+            label: "Air Quality Maintenance & Repairs",
+            text: "Routine filter cleanings, refrigerant top-ups, electrical system checkups, and precise duct disinfection for premium indoor air quality.",
+          },
+        ],
+      },
+      {
+        title: "Advanced Landscape Illumination & Electrical Works",
+        text: "Bespoke low-voltage landscape lighting schemes engineered to completely transform paths, highlight signature plants, and enhance property safety after dark.",
+        image: "/images/service-lighting.jpg",
+        alt: "Low garden lights lining a wet path at dusk",
+        points: [
+          {
+            label: "Fine Architectural Lighting",
+            text: "Energy-efficient, low-voltage solid brass and copper LED fixtures utilizing sophisticated uplighting and moonlighting techniques.",
+          },
+          {
+            label: "Automation & App Controls",
+            text: "Smart lighting hubs connected to mobile apps and astronomical timers to set tailored evening lighting themes easily.",
+          },
+          {
+            label: "Safe Electrical System Maintenance",
+            text: "Routine electrical safety tests, main breaker inspections, secure wire burial, and replacement of outdated outdoor light fixtures.",
+          },
+        ],
+      },
     ],
   },
   {
-    slug: "backyard-landscaping",
-    title: "Backyard Landscaping",
-    text: "Backyard landscapes for play, paths, and everyday family life.",
-    image: "/images/service-backyard.jpg",
-    points: [
-      "Landscapes for play, paths, and everyday family life.",
-      "Lawn, terrace, and shade composed for everyday use.",
-      "Pathways that guide movement through the garden.",
-    ],
-  },
-  {
-    slug: "interior-landscaping",
-    title: "Interior Landscaping",
-    text: "Interior greenery for rooms, courtyards, and indoor spaces.",
+    slug: "cleaning-interior-finishes",
+    title: "Cleaning & Interior Finishes",
+    text: "Premium structural finishing, interior surface transformations, and comprehensive deep cleaning services for luxury residential estates and commercial buildings.",
     image: "/images/service-interior.jpg",
-    points: [
-      "Greenery for rooms, courtyards, and indoor spaces.",
-      "Specimens chosen for form and light.",
-      "Planting for atriums, entries, and sheltered courts.",
-    ],
-  },
-  {
-    slug: "outdoor-lights",
-    title: "Outdoor Lights",
-    text: "Lighting that transforms the mood of paths, gardens, and lounges.",
-    image: "/images/service-lighting.jpg",
-    points: [
-      "Lighting that transforms the mood of paths, gardens, and lounges.",
-      "Evening light for coffee corners, play, and quiet hours.",
-      "Light planned together with the planting.",
-    ],
-  },
-  {
-    slug: "pergolas",
-    title: "Pergolas",
-    text: "Pergolas and shaded outdoor rooms, built with the landscape.",
-    image: "/images/service-pergola.jpg",
-    points: [
-      "Pergolas and shaded outdoor rooms, built with the landscape.",
-      "Shade for terraces, lounges, and garden edges.",
-      "Structure and planting designed as one outdoor room.",
-    ],
-  },
-  {
-    slug: "civil-work",
-    title: "Civil Work",
-    text: "Plaster, carpentry, wood flooring, and the built work that supports the landscape.",
-    image: "/images/service-villa.jpg",
-    points: [
-      "Plaster works for walls, courts, and garden edges.",
-      "Carpentry and wood flooring for outdoor rooms and interiors.",
-      "Fitting, repair, and maintenance of the finished built work.",
+    areas: [
+      {
+        title: "Custom Carpentry & Premium Wood Flooring",
+        text: "High-end interior woodwork, bespoke wooden features, and flawless flooring layouts designed with outstanding style and durability.",
+        image: "/images/atrium.jpg",
+        alt: "Interior court with a timber slat wall, stone floor, and planting",
+        points: [
+          {
+            label: "Wood Flooring Installations",
+            text: "Flawless installation of premium solid hardwood planks, high-durability composite wood tiles, and engineered indoor wood flooring layouts.",
+          },
+          {
+            label: "Fine Finished Carpentry",
+            text: "Custom interior wood paneling, fine structural baseboards, unique timber feature walls, and bespoke cabinetry solutions.",
+          },
+        ],
+      },
+      {
+        title: "Professional Wallpaper & Wall Finish Fixing",
+        text: "Expert wallpaper installations utilizing a diverse range of high-end materials, unique textures, and sophisticated modern patterns.",
+        image: "/images/service-interior.jpg",
+        alt: "Stone and planted interior wall with wood paneling and pendant lights",
+        points: [
+          {
+            label: "Premium Pattern Application",
+            text: "Flawless wall leveling, pattern matching, clean edge trimming, and the seamless application of heavy fabric or delicate vinyl wallpaper sets.",
+          },
+        ],
+      },
+      {
+        title: "Comprehensive Building Cleaning Services",
+        text: "All-inclusive, high-standard sanitation and deep cleaning solutions tailored for modern residential properties, large corporate offices, and industrial hubs.",
+        image: "/images/maintenance-crew.jpg",
+        alt: "Green Mirage crew member clearing a stone entrance beside clipped shrubs",
+        points: [
+          {
+            label: "Deep Site Transformation",
+            text: "Thorough post-construction site cleanup, deep pressure washing for external tiles, detailed window washing, and full sanitization of multi-story buildings.",
+          },
+        ],
+      },
     ],
   },
 ];

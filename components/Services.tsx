@@ -15,11 +15,11 @@ export function Services() {
             align="center"
             kicker="What we do"
             title="Our Services"
-            description="Villa landscaping, terraces, poolside decks, lounges, backyards, interiors, lighting, and pergolas."
+            description="Hardscape, landscape, irrigation, MEP and swimming pools, and cleaning and interior finishes."
           />
         </Reveal>
 
-        <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <RevealItem key={service.slug} lift>
               <Link

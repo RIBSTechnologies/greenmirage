@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Photo } from "@/components/Photo";
 import { ScrollTop } from "@/components/ScrollTop";
 import { reasons } from "@/lib/data";
+import { BadgeCheck, Box, Droplets, Leaf } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +20,29 @@ const paragraphs = [
   "We are committed to delivering high-quality workmanship across every project we undertake. At Green Mirage Technical Services, quality is never compromised. We focus on durability, precision, and client satisfaction in every detail of our work.",
   "Whether for residential, commercial, or public developments, we create sustainable and elegant environments where nature, functionality, and craftsmanship come together seamlessly.",
   "At Green Mirage, we go beyond designing and building spaces—we create trust, deliver quality, and build lasting value and experiences.",
+];
+
+const values = [
+  {
+    title: "Smart Irrigation",
+    text: "Automated, sensor-driven watering systems designed explicitly for the challenging UAE climate to reduce water consumption while maintaining soil health.",
+    icon: Droplets,
+  },
+  {
+    title: "Expert Horticulture",
+    text: "Tailored plant selection, meticulous soil analysis, and expert nutrient management led by certified professionals.",
+    icon: Leaf,
+  },
+  {
+    title: "Turnkey Execution",
+    text: "Seamless management from initial 3D visualization, material curation, through to a strict 150+ point quality execution checklist.",
+    icon: Box,
+  },
+  {
+    title: "Premium & Authentic Curation",
+    text: "Exclusively partnering with certified, authentic brands and implementing a robust 2-stage assembly check for structural durability.",
+    icon: BadgeCheck,
+  },
 ];
 
 const expertise = [
@@ -92,6 +116,38 @@ export default function AboutPage() {
                 ))}
               </ol>
             </div>
+          </div>
+        </section>
+
+        <section className="bg-[#F4F0E8] py-20 md:py-28">
+          <div className="shell">
+            <div className="max-w-xl">
+              <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-[#8A8175]">
+                How we work
+              </p>
+              <h2 className="mt-4 font-serif text-5xl leading-[0.98] tracking-tight text-[#1C1917] md:text-6xl">
+                Core Framework & Values
+              </h2>
+            </div>
+            <ul className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              {values.map((value, index) => (
+                <li
+                  key={value.title}
+                  className="flex h-full flex-col rounded-2xl border border-[#E4DDD2] bg-white p-7 shadow-[0_10px_30px_rgba(28,25,23,0.04)]"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F4F0E8] text-[#1C1917]">
+                      <value.icon size={22} strokeWidth={1.6} />
+                    </span>
+                    <span className="font-serif text-2xl text-[#C4B8A5]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="mt-6 font-serif text-2xl leading-snug text-[#1C1917]">{value.title}</h3>
+                  <p className="mt-3 text-[15px] leading-7 text-[#5C564E]">{value.text}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
