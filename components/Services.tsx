@@ -15,7 +15,7 @@ export function Services() {
             align="center"
             kicker="What we do"
             title="Our Services"
-            description="Hardscape, landscape, irrigation, MEP and swimming pools, and cleaning and interior finishes."
+            description="Hard landscape, soft landscape, irrigation, MEP and swimming pools, and cleaning and interior finishes."
           />
         </Reveal>
 

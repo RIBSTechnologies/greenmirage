@@ -212,7 +212,7 @@ export const services: {
 }[] = [
   {
     slug: "hardscape",
-    title: "Hardscape",
+    title: "Hard Landscape",
     menu: "All Civil Works & Paving",
     text: "The structural framework and hardscaping components serve as the foundational architecture for all Green Mirage luxury landscape designs, ensuring long-term structural integrity and seamless functional zoning.",
     image: "/images/gallery-backyard.jpg",
@@ -293,7 +293,7 @@ export const services: {
   },
   {
     slug: "landscape",
-    title: "Landscape",
+    title: "Soft Landscape",
     menu: "Planting, Soil & Horticulture Curation",
     text: "Combining advanced scientific soil engineering with high-impact botanical choices to deliver lively, visually spectacular green spaces optimized for the distinct Middle Eastern climate.",
     image: "/images/gallery-entry.jpg",
@@ -350,7 +350,7 @@ export const services: {
         title: "Professional Horticulture & Long-term Garden Care",
         text: "Consistent, systematic maintenance services managed by specialized experts to protect botanical wellness, soil biome health, and overall aesthetic perfection.",
         image: "/images/maintenance-beds.jpg",
-        alt: "Garden crew working soil and planted beds beside a lawn",
+        alt: "Green Mirage crew spreading mulch and planting beds in a villa garden",
         points: [
           {
             label: "Nutrient & Soil Stewardship",
@@ -588,7 +588,7 @@ export const services: {
         title: "Comprehensive Building Cleaning Services",
         text: "All-inclusive, high-standard sanitation and deep cleaning solutions tailored for modern residential properties, large corporate offices, and industrial hubs.",
         image: "/images/maintenance-crew.jpg",
-        alt: "Green Mirage crew member clearing a stone entrance beside clipped shrubs",
+        alt: "Green Mirage crew spreading mulch and planting beds in a villa garden",
         points: [
           {
             label: "Deep Site Transformation",

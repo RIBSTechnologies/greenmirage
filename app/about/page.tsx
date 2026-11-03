@@ -59,12 +59,6 @@ const expertise = [
 export default function AboutPage() {
   return (
     <>
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-gold focus:px-4 focus:py-2 focus:text-forest"
-      >
-        Skip to content
-      </a>
       <Header />
       <main id="main" className="bg-[#F4F0E8] text-[#1C1917]">
         <section className="shell grid items-end gap-10 pb-16 pt-32 lg:grid-cols-12 lg:gap-14 lg:pt-36">

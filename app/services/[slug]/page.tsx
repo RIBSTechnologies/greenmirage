@@ -29,12 +29,6 @@ export default function ServicePage({ params }: { params: Params }) {
 
   return (
     <>
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-gold focus:px-4 focus:py-2 focus:text-forest"
-      >
-        Skip to content
-      </a>
       <Header />
       <main id="main">
         <section className="relative flex min-h-[72svh] items-end overflow-hidden">
